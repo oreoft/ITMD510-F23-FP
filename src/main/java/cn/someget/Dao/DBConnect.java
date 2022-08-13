@@ -18,9 +18,9 @@ public class DBConnect {
         return connection;
     }
 
-    private final static String URL = "jdbc:mysql://ziji:3306/510fp";
-    private final static String USERNAME = "root";
-    private final static String PASSWORD = "jikechufa";
+    private final static String URL = "jdbc:mysql://www.papademas.net:3307/510fp?autoReconnect=true&useSSL=false";
+    private final static String USERNAME = "fp510";
+    private final static String PASSWORD = "510";
 
     public DBConnect() {
         try {
