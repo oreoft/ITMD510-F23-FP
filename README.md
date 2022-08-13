@@ -1,4 +1,4 @@
-# IIT_Bank_System
+# IIT_Library_System
 
 ####   **Project Intro**
 This is a final project of MD510. It simulates the following processes:
