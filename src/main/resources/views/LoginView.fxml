@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="660.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.someget.controllers.LoginController">
+   <children>
+      <ImageView fitHeight="257.0" fitWidth="308.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <image>
+            <Image url="@../imgs/login-background.png" />
+         </image></ImageView>
+      <ImageView fitHeight="159.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="20.0">
+         <image>
+            <Image url="@../imgs/logo.png" />
+         </image></ImageView>
+      <FlowPane alignment="TOP_CENTER" columnHalignment="CENTER" hgap="20.0" layoutX="167.0" layoutY="190.0" minWidth="266.0" prefHeight="60.0" prefWidth="266.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="70.0" text="Account:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="txtUsername" alignment="TOP_LEFT" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="TOP_CENTER" hgap="20.0" layoutX="167.0" layoutY="250.0" minWidth="266.0" prefHeight="60.0" prefWidth="306.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="70.0" text="Password:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <PasswordField fx:id="txtPassword" alignment="TOP_LEFT" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" hgap="80.0" layoutY="318.0" prefHeight="34.0" prefWidth="600.0" rowValignment="TOP" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="90.0" text="Login" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#signup" prefHeight="27.0" prefWidth="90.0" text="Sign Up" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>

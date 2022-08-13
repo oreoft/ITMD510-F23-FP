@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="400.0" maxWidth="600.0" prefHeight="400.0" prefWidth="600.0" styleClass="root-pane" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.someget.controllers.AdminController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" x="450.0" y="10.0">
+         <image>
+            <Image url="@../imgs/logo.png" />
+         </image>
+      </ImageView>
+
+      <Label fx:id="userLbl" layoutX="42.0" layoutY="20.0" styleClass="user-label" text="Admin Panel">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+
+      <Button layoutX="36.0" layoutY="75.0" mnemonicParsing="false" onAction="#viewAccounts" text="View Accounts" />
+      <Button layoutX="36.0" layoutY="134.0" mnemonicParsing="false" onAction="#viewRecords" text="View Records" />
+      <Button layoutX="36.0" layoutY="340.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="96.0" styleClass="destroy-button" text="Logout" />
+      <AnchorPane fx:id="paneRecords" layoutX="176.0" layoutY="75.0" prefHeight="320.0" prefWidth="400.0" visible="false" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <TableView fx:id="tblRecords" prefHeight="217.0" prefWidth="400.0" AnchorPane.bottomAnchor="103.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TableColumn fx:id="recordTid" prefWidth="60.0" text="Tid" />
+                  <TableColumn fx:id="recordCid" prefWidth="50.0" text="Cid" />
+                  <TableColumn fx:id="recordAmount" prefWidth="215.0" text="Amount" />
+               </columns>
+            </TableView>
+            <FlowPane alignment="CENTER" hgap="40.0" layoutY="225.0" prefHeight="42.0" prefWidth="400.0" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="21.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#clickFilter" prefWidth="60.0" styleClass="record-filter-btn" text="Filter" />
+                  <Button mnemonicParsing="false" onAction="#addRecord" prefWidth="60.0" text="Add" />
+                  <Button mnemonicParsing="false" onAction="#editRecord" prefWidth="60.0" text="Edit" />
+                  <Button mnemonicParsing="false" onAction="#deleteRecord" prefWidth="60.0" styleClass="destroy-button" text="Delete" />
+               </children>
+            </FlowPane>
+            <Label fx:id="filteredBalance" alignment="CENTER_RIGHT" layoutX="0.0" layoutY="280" prefWidth="375.0" styleClass="ct-inner-lbl" text="Balance" visible="false" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="paneAddBank" layoutX="176.0" layoutY="75.0" prefHeight="282.0" prefWidth="375.0" styleClass="division-pane">
+         <effect>
+            <Glow level="0.0" />
+         </effect>
+         <children>
+            <Label layoutX="92.0" layoutY="25.0" styleClass="ct-inner-lbl" text="Add Bank" />
+            <Label layoutX="21.0" layoutY="76.0" styleClass="ct-inner-lbl" text="Name" />
+            <Label layoutX="21.0" layoutY="119.0" styleClass="ct-inner-lbl" text="Address" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneAccounts" layoutX="176.0" layoutY="75.0" prefHeight="282.0" prefWidth="375.0">
+         <children>
+            <TableView fx:id="tblAccounts" prefHeight="217.0" prefWidth="375.0">
+              <columns>
+                <TableColumn fx:id="accountID" prefWidth="79.0" text="ID" />
+                <TableColumn fx:id="accountName" prefWidth="187.0" text="Account" />
+                  <TableColumn fx:id="roleType" prefWidth="108.0" text="RoleType" />
+              </columns>
+            </TableView>
+            <FlowPane alignment="CENTER" hgap="60.0" layoutY="225.0" prefHeight="42.0" prefWidth="375.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addAccount" prefWidth="60.0" text="Add" />
+                  <Button mnemonicParsing="false" onAction="#editAccount" prefWidth="60.0" text="Edit" />
+                  <Button mnemonicParsing="false" onAction="#deleteAccount" prefWidth="60.0" styleClass="destroy-button" text="Delete" />
+               </children>
+            </FlowPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

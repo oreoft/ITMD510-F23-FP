@@ -1,0 +1,39 @@
+.root-pane {
+    -fx-background-color: #404040;
+}
+
+.division-pane {
+    -fx-border-color: LightSkyBlue;
+}
+
+.button {
+    -fx-background-color: darkturquoise;
+}
+
+.button:hover {
+    -fx-background-color: lightskyblue;
+}
+
+.button:focused {
+    -fx-border-color: green;
+}
+
+.destroy-button {
+    -fx-background-color: Salmon;
+}
+
+.destroy-button:hover {
+    -fx-background-color: LightSalmon;
+}
+
+.record-filter-btn:focused {
+    -fx-background-color: green;
+}
+
+.user-label {
+    -fx-text-fill: #fefefe;
+}
+
+.ct-inner-lbl {
+    -fx-text-fill: #fefefe;
+}
